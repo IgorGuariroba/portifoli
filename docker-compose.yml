@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    image: node:16
+    container_name: node
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: sh -c 'npm install -g npm@latest && npm install && npm run start'
+    ports:
+      - "5173:5173"
+    networks:
+      app_network:
+#        ipv4_address: 172.28.1.2
+
+networks:
+  app_network:
+    ipam:
+      driver: default
+#      config:
+#        - subnet: 172.28.0.0/16
