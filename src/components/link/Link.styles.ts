@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {NavLink} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-export const StyledLink = styled(NavLink)`
+export const StyledLink = styled(NavLink)<{ isActive: boolean }>`
   display: flex;
   align-items: center;
   column-gap: 1.5rem;
@@ -24,8 +24,11 @@ export const StyledLink = styled(NavLink)`
       background-color: ${props => props.theme.firstColor};
       color: ${props => props.theme.textWhite};
     }
-    ${props => props.isOpen ? props.theme.containerColor : props.theme.textWhite}
     
+    ${props => props.isActive && `
+      background-color: ${props.theme.firstColor};
+      color: ${props.theme.textWhite};
+    `}
   }
 `;
 

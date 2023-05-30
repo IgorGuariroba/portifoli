@@ -42,7 +42,7 @@ export const Item = styled.li`
   }
 `;
 
-export const Name = styled.h3`
+export const Name = styled.h3<{ isActive: boolean }>`
   font-size: 1rem;
   font-weight: ${props => props.theme.weigth500};
   @media screen and (min-width: 1024px) {
@@ -56,6 +56,13 @@ export const Name = styled.h3`
     border-radius: 1.8rem;
     font-size: ${props => props.theme.smallFontSize};
     color: ${props => props.theme.textWhite};
+    opacity: 0;
+    visibility: hidden;
+
+    ${props => props.isActive && `
+      opacity: 1;
+      visibility: visible;
+    `}
   }
 `;
 

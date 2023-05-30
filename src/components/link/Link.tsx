@@ -7,8 +7,7 @@ interface LinkProps {
     to: string;
     icon: IconProp;
     children: React.ReactNode;
-    onClick?: () => boolean;
-    result: boolean;
+    onClick?: () => void;
 }
 
 export const Link: React.FC<LinkProps> = ({ to, icon, children, onClick }) => {
