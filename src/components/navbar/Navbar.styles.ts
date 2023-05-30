@@ -48,7 +48,7 @@ export const Name = styled.h3<{ isActive: boolean }>`
   @media screen and (min-width: 1024px) {
     position: absolute;
     top: 0;
-    right: 100%;
+    right: 0;
     background-color: ${props => props.theme.firstColor};
     height: 100%;
     line-height: 3.1rem;
@@ -58,10 +58,13 @@ export const Name = styled.h3<{ isActive: boolean }>`
     color: ${props => props.theme.textWhite};
     opacity: 0;
     visibility: hidden;
-
+    transition: all 0.3s ease;
+    z-index: -1;
     ${props => props.isActive && `
       opacity: 1;
       visibility: visible;
+      border-radius: 1.8rem 0 0 1.8rem;
+      right: 1.6rem;
      
     `}
   }
