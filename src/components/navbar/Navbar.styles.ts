@@ -1,5 +1,6 @@
 import styled  from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {StyledLink} from "../link/Link.styles.ts";
 
 export const Nav = styled.nav`
   @media screen and (min-width: 1024px) {
@@ -42,7 +43,7 @@ export const Item = styled.li`
   }
 `;
 
-export const Name = styled.h3<{ isActive: boolean }>`
+export const Name = styled.h3`
   font-size: 1rem;
   font-weight: ${props => props.theme.weigth500};
   @media screen and (min-width: 1024px) {
@@ -60,13 +61,12 @@ export const Name = styled.h3<{ isActive: boolean }>`
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: -1;
-    ${props => props.isActive && `
+    ${StyledLink}:hover & {
       opacity: 1;
       visibility: visible;
       border-radius: 1.8rem 0 0 1.8rem;
       right: 1.6rem;
-     
-    `}
+    }
   }
 `;
 
