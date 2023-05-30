@@ -8,9 +8,10 @@ interface LinkProps {
     icon: IconProp;
     children: React.ReactNode;
     onClick?: () => void;
+    isActive?: any;
 }
 
-export const Link: React.FC<LinkProps> = ({ to, icon, children, onClick }) => {
+export const Link: React.FC<LinkProps> = ({ to, icon, children, onClick,isActive }) => {
     const handleClick = () => {
         if (onClick) {
             const result = onClick(); // Chama a função onClick e obtém o resultado
@@ -19,7 +20,7 @@ export const Link: React.FC<LinkProps> = ({ to, icon, children, onClick }) => {
     };
 
     return (
-        <StyledLink to={to} onClick={handleClick}>
+        <StyledLink to={to} onClick={handleClick} isActive={isActive}>
             <Icon icon={icon} />
             {children}
         </StyledLink>

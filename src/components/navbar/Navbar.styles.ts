@@ -62,6 +62,7 @@ export const Name = styled.h3<{ isActive: boolean }>`
     ${props => props.isActive && `
       opacity: 1;
       visibility: visible;
+     
     `}
   }
 `;

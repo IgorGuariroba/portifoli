@@ -24,16 +24,16 @@ export function Navbar() {
             <Menu isOpen={isOpen}>
                 <List>
                     <Item>
-                        <Link to="/" icon={faHouse} onClick={handleToggleClick}>
+                        <Link isActive={location.pathname === '/'} to="/" icon={faHouse} onClick={handleToggleClick}>
                             <Name isActive={location.pathname === '/'}>Home</Name>
                         </Link>
-                        <Link to="/sobre" icon={faUserLarge} onClick={handleToggleClick}>
+                        <Link isActive={location.pathname === '/sobre'} to="/sobre" icon={faUserLarge} onClick={handleToggleClick}>
                             <Name isActive={location.pathname === '/sobre'}>About</Name>
                         </Link>
-                        <Link to="/portifolio" icon={faFolderOpen} onClick={handleToggleClick}>
+                        <Link isActive={location.pathname === '/portifolio'} to="/portifolio" icon={faFolderOpen} onClick={handleToggleClick}>
                             <Name isActive={location.pathname === '/portifolio'}>Portfolio</Name>
                         </Link>
-                        <Link to="/contato" icon={faEnvelopeOpen} onClick={handleToggleClick}>
+                        <Link isActive={location.pathname === '/contato'} to="/contato" icon={faEnvelopeOpen} onClick={handleToggleClick}>
                             <Name isActive={location.pathname === '/contato'}>Contact</Name>
                         </Link>
                     </Item>

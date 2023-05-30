@@ -24,10 +24,11 @@ export const StyledLink = styled(NavLink)<{ isActive: boolean }>`
       background-color: ${props => props.theme.firstColor};
       color: ${props => props.theme.textWhite};
     }
-    
+
     ${props => props.isActive && `
-      background-color: ${props.theme.firstColor};
-      color: ${props.theme.textWhite};
+      background-color: ${ props.theme.firstColor};
+      color: ${ props.theme.textWhite};
+     
     `}
   }
 `;
