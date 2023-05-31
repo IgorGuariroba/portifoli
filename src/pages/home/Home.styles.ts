@@ -1,6 +1,5 @@
 import styled  from "styled-components";
 import {NavLink} from "react-router-dom";
-import { FaReact } from 'react-icons/fa';
 export const Grid = styled.section`
   display: grid;
   gap: 1.8rem;
@@ -68,7 +67,7 @@ export const Button = styled(NavLink)`
     z-index: -1;
     transform: translateX(100%);
     background-color: ${props => props.theme.firstColor};
-    transition: all 0.4s ease-out;
+    transition: all 0.3s ease-out;
   }
   
   &:hover {
@@ -80,7 +79,7 @@ export const Button = styled(NavLink)`
     transform: translateX(0);
   }
 `;
-export const Icon = styled(FaReact)`
+export const Icon = styled.span`
   background-color: ${props => props.theme.firstColor};
   position: absolute;
   inset-block: -3px;
