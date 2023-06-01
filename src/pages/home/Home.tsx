@@ -17,7 +17,7 @@ export function Home() {
                     </Description>
 
                     <Button to={'/sobre'}>
-                        More About Me <Icon icon={FaArrowRight}></Icon>
+                        More About Me <Icon><FaArrowRight/></Icon>
                     </Button>
                 </Data>
             </Content>
