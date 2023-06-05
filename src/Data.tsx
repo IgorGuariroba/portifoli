@@ -1,3 +1,5 @@
+import {FaBriefcase, FaGraduationCap} from "react-icons/fa";
+
 export const personalInfo = [
     {
         id: 1,
@@ -111,8 +113,31 @@ export const skills = [
         percentage: 78,
     },
     {
-        id:8,
+        id: 8,
         title: 'Git',
         percentage: 91,
     },
+];
+
+export const resulme = [
+    {
+        id: 1,
+        category: 'experience',
+        icon: <FaBriefcase/>,
+        years: '2019 - Present',
+        title: 'Developer <span> Movida Seminovos </span>',
+        desc: 'Como Desenvolvedor Web na Movida Seminovos, sou responsável por projetar, construir e manter ' +
+            'o nosso site e aplicações web, garantindo uma experiência de usuário intuitiva e responsiva. Trabalho ' +
+            'ativamente tanto no front-end quanto no back-end dos nossos sistemas, usando linguagens como HTML, ' +
+            'CSS e JavaScript no front-end, e PHP no back-end.',
+    },
+    {
+        id: 2,
+        category: 'education',
+        icon: <FaGraduationCap/>,
+        years: '2019 - 2020',
+        title: 'Technologist in Systems Analysis and Development <span>UMC</span>',
+        desc: 'Higher education',
+    },
+
 ];

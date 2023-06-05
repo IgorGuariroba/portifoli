@@ -11,10 +11,6 @@ export const SectionContainer = styled.main`
   max-width: 1140px;
   margin-inline: auto;
   padding-block: 4.3rem;
-
-  & span {
-    color: ${props => props.theme.firstColor};
-  }
 `;
 export const AboutS = styled.section``;
 export const Title = styled.h2`
@@ -76,4 +72,15 @@ export const SkillsContainerGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   row-gap: 3rem;
   justify-items: center;
+`;
+
+export const Resulme = styled.section`
+
+`;
+export const ResulmeContainerGrid = styled.div`
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(2, 1fr);
+`;
+export const ResulmeData = styled.div`
 `;
