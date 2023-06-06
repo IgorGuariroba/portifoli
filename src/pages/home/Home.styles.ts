@@ -27,6 +27,10 @@ export const Title = styled.h1`
   font-size: ${props => props.theme.h1FontSize};
   line-height: 1.24;
   padding-left: 4.3rem;
+
+  span:first-child {
+    color: ${props => props.theme.firstColor} !important;
+  }
   
   &::before {
     content: '';

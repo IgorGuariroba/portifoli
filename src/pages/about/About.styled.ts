@@ -20,6 +20,9 @@ export const Title = styled.h2`
   font-weight: ${props => props.theme.weigth800};
   text-align: center;
   margin-bottom: 4.3rem;
+  span:first-child {
+    color: ${props => props.theme.firstColor} !important;
+  }
 `;
 export const Grid = styled.div`
   display: grid;

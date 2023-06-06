@@ -7,7 +7,7 @@ export function Home() {
             <Content>
                 <Data>
                     <Title>
-                        <Span>I'm Igor Ravel.</Span> Developer
+                        I'm Igor Ravel. <Span>Developer</Span>
                     </Title>
 
                     <Description>
