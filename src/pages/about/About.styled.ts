@@ -8,9 +8,11 @@ import {Button, Icon} from "../home/Home.styles.ts";
 // container max-width:1140px; margin-inline:auto;
 
 export const SectionContainer = styled.main`
-  max-width: 1140px;
+  max-width: 1040px;
   margin-inline: auto;
   padding-block: 4.3rem;
+  padding-inline: 15px;
+  align-items: flex-start;
 `;
 export const AboutS = styled.section``;
 export const Title = styled.h2`
@@ -81,6 +83,9 @@ export const ResulmeContainerGrid = styled.div`
   display: grid;
   gap: 1.8rem;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row;
 `;
 export const ResulmeData = styled.div`
+  max-width: 100%;
+  overflow: hidden;
 `;

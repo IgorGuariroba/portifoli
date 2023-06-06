@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const ResulmeItemStyled = styled.div`
+  max-width: 100%;
   position: relative;
-  padding-left: 3.75rem;
+  padding: 0.8rem   0.8rem   1.25rem 3rem;
   &:not(:last-child) {
       margin-bottom: 3.12rem;
   }
@@ -61,6 +62,5 @@ export const ResulmeSubTitle = styled.h3`
 export const ResulmeDescription = styled.p`
   font-size: ${props => props.theme.smallFontSize};
   line-height: 1.6;
-  
 `;
 

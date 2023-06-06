@@ -9,7 +9,7 @@ import parse from "html-react-parser";
 import {ReactNode} from "react";
 
 type ResulmeItemProps = {
-    icon: ReactNode;
+    icon?: ReactNode;
     years?: string;
     title?: string;
     desc?: string;

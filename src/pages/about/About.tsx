@@ -37,7 +37,7 @@ export function About() {
                         </ListGrid>
 
                         <ButtonAbout to={'/'}>
-                            Download CV
+                            Download Cv
                             <IconAbout><FaDownload/></IconAbout>
                         </ButtonAbout>
                     </InfoAbout>
@@ -62,6 +62,7 @@ export function About() {
                 <SectionSubTitle>Experience & Education</SectionSubTitle>
 
                 <ResulmeContainerGrid>
+
                     <ResulmeData>
                         {resulme.map((val) => {
                             if(val.category ==='Experience'){
@@ -72,7 +73,6 @@ export function About() {
 
                     <ResulmeData>
                         {resulme.map((val) => {
-                            console.log(val.category);
                             if(val.category ==='education'){
                                 return <ResulmeItem key={val.id} {...val} />;
                             }
