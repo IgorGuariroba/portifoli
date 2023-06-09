@@ -20,6 +20,10 @@ export const Grid = styled.section`
   @media screen and (max-width: 1109px) {
     justify-items: start
   }
+
+  @media screen and (max-width: 999px) {
+    gap: 0;
+  }
 `;
 export const Img = styled.img`
   height: 100%;
@@ -34,6 +38,12 @@ export const Img = styled.img`
     max-width: 90%;
     max-height: 70%;
   }
+
+  @media screen and (max-width: 999px) {
+    margin-top: 2rem;
+    height: 100%;
+  }
+
 `;
 export const Content = styled.div``;
 export const Data = styled.div`
@@ -43,6 +53,7 @@ export const Data = styled.div`
   @media screen and (min-width: 1026px) and (max-width: 1191px) {
     max-width: 27.5rem;
   }
+
 `;
 export const Title = styled.h1`
   position: relative;

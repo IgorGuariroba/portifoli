@@ -149,6 +149,10 @@ Error generating stack: `+a.message+`
   @media screen and (max-width: 1109px) {
     justify-items: start
   }
+
+  @media screen and (max-width: 999px) {
+    gap: 0;
+  }
 `,Mw=I.img`
   height: 100%;
   object-fit: cover;
@@ -162,6 +166,12 @@ Error generating stack: `+a.message+`
     max-width: 90%;
     max-height: 70%;
   }
+
+  @media screen and (max-width: 999px) {
+    margin-top: 2rem;
+    height: 100%;
+  }
+
 `,Dw=I.div``,Fw=I.div`
   max-width: 37.5rem;
   margin-inline: auto;
@@ -169,6 +179,7 @@ Error generating stack: `+a.message+`
   @media screen and (min-width: 1026px) and (max-width: 1191px) {
     max-width: 27.5rem;
   }
+
 `,Uw=I.h1`
   position: relative;
   font-size: ${e=>e.theme.h1FontSize};
