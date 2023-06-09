@@ -247,8 +247,8 @@ Error generating stack: `+a.message+`
   transform: rotate(-15deg);
 
   @media screen and (max-width: 1024px) {
-    transform: rotate(30deg);
-    top: -70%;
+    transform: rotate(40deg);
+    top: -80%;
   }
 `;var Mv={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},Kd=Be.createContext&&Be.createContext(Mv),bn=globalThis&&globalThis.__assign||function(){return bn=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++){t=arguments[n];for(var i in t)Object.prototype.hasOwnProperty.call(t,i)&&(e[i]=t[i])}return e},bn.apply(this,arguments)},Vw=globalThis&&globalThis.__rest||function(e,t){var n={};for(var r in e)Object.prototype.hasOwnProperty.call(e,r)&&t.indexOf(r)<0&&(n[r]=e[r]);if(e!=null&&typeof Object.getOwnPropertySymbols=="function")for(var i=0,r=Object.getOwnPropertySymbols(e);i<r.length;i++)t.indexOf(r[i])<0&&Object.prototype.propertyIsEnumerable.call(e,r[i])&&(n[r[i]]=e[r[i]]);return n};function Dv(e){return e&&e.map(function(t,n){return Be.createElement(t.tag,bn({key:n},t.attr),Dv(t.child))})}function qt(e){return function(t){return Be.createElement(Yw,bn({attr:bn({},e.attr)},t),Dv(e.child))}}function Yw(e){var t=function(n){var r=e.attr,i=e.size,a=e.title,o=Vw(e,["attr","size","title"]),l=i||n.size||"1em",s;return n.className&&(s=n.className),e.className&&(s=(s?s+" ":"")+e.className),Be.createElement("svg",bn({stroke:"currentColor",fill:"currentColor",strokeWidth:"0"},n.attr,r,o,{className:s,style:bn(bn({color:e.color||n.color},n.style),e.style),height:l,width:l,xmlns:"http://www.w3.org/2000/svg"}),a&&Be.createElement("title",null,a),e.children)};return Kd!==void 0?Be.createElement(Kd.Consumer,null,function(n){return t(n)}):t(Mv)}function Gw(e){return qt({tag:"svg",attr:{viewBox:"0 0 448 512"},child:[{tag:"path",attr:{d:"M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"}}]})(e)}function Xw(e){return qt({tag:"svg",attr:{viewBox:"0 0 512 512"},child:[{tag:"path",attr:{d:"M320 336c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-48H0v144c0 25.6 22.4 48 48 48h416c25.6 0 48-22.4 48-48V288H320v48zm144-208h-80V80c0-25.6-22.4-48-48-48H176c-25.6 0-48 22.4-48 48v48H48c-25.6 0-48 22.4-48 48v80h512v-80c0-25.6-22.4-48-48-48zm-144 0H192V96h128v32z"}}]})(e)}function ba(e){return qt({tag:"svg",attr:{viewBox:"0 0 640 512"},child:[{tag:"path",attr:{d:"M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"}}]})(e)}function Qw(e){return qt({tag:"svg",attr:{viewBox:"0 0 512 512"},child:[{tag:"path",attr:{d:"M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"}}]})(e)}function Kw(e){return qt({tag:"svg",attr:{viewBox:"0 0 640 512"},child:[{tag:"path",attr:{d:"M622.34 153.2L343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"}}]})(e)}function Zw(){return k.jsxs(zw,{children:[k.jsx(Mw,{src:"https://avatars.githubusercontent.com/IgorGuariroba"}),k.jsx(Dw,{children:k.jsxs(Fw,{children:[k.jsxs(Uw,{children:["I'm Igor Ravel. ",k.jsx(Hw,{children:"Developer"})]}),k.jsx(Bw,{children:"Welcome to my portfolio! As a Full Cycle Developer, I engage in every phase of software development. Here you'll find a range of projects that showcase my skills in Front-End, Back-End, DevOps, and Agile practices. I look forward to collaborating on your next project."}),k.jsxs($v,{to:"/sobre",children:["More About Me ",k.jsx(zv,{children:k.jsx(Gw,{})})]})]})}),k.jsx(Ww,{})]})}const Jw=I.main`
   max-width: 1040px;
@@ -262,8 +262,11 @@ Error generating stack: `+a.message+`
     box-sizing: border-box;
     overflow: hidden;
   }
+
+  @media screen and (max-width: 999px) {
+    overflow-x: hidden;
+  }
 `,qw=I.section`
-    
 `,ex=I.h2`
   font-size: ${e=>e.theme.bigFontSize};
   font-weight: ${e=>e.theme.weigth800};
@@ -287,6 +290,10 @@ Error generating stack: `+a.message+`
   font-size: ${e=>e.theme.h3FontSize};
   font-weight: ${e=>e.theme.weigth600};
   margin-bottom: 1.25rem;
+  @media screen and (max-width: 926px) {
+    text-align: center;
+    max-width: 89%;
+  }
 `,ix=I.ul`
   display: grid;
   gap: 1.8rem;
@@ -300,12 +307,17 @@ Error generating stack: `+a.message+`
 
   @media screen and (max-width: 926px) {
     gap: 0.4rem;
-    max-width: 95%;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 20rem;
+    margin-left: 0.8rem;
   }
 `,ax=I($v)``,ox=I(zv)`
     color: ${e=>e.theme.textWhite}!important;
 `,lx=I(Fv)`
   grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 926px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `,Zd=I.div`
   border-top: 1px  solid ${e=>e.theme.borderColor};
   max-width: 40%;
@@ -332,6 +344,9 @@ Error generating stack: `+a.message+`
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: row;
   align-items: flex-start;
+  @media screen and (max-width: 926px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `,qd=I.div`
   max-width: 100%;
   overflow: hidden;
