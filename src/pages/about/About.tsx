@@ -4,7 +4,14 @@ import {
     ButtonAbout,
     IconAbout,
     InfoAbout,
-    ListGrid, SectionContainer, SectionSubTitle, Separator, SkillsAbout, SkillsContainerGrid,
+    ListGrid,
+    Resulme,
+    ResulmeContainerGrid, ResulmeData,
+    SectionContainer,
+    SectionSubTitle,
+    Separator,
+    SkillsAbout,
+    SkillsContainerGrid,
     StatsGrid,
     Subtitle,
     Title
@@ -13,6 +20,8 @@ import {Info} from "../../components/info/Info.tsx";
 import {FaDownload} from "react-icons/fa";
 import {Stats} from "../../components/stats/Stats.tsx";
 import {Skill} from "../../components/skills/Skills.tsx";
+import {resulme} from "../../Data.tsx";
+import {ResulmeItem} from "../../components/resulmeItem/ResulmeItem.tsx";
 
 export function About() {
     return (
@@ -21,14 +30,14 @@ export function About() {
                 <Title>About <span>Me</span></Title>
                 <AboutContainerGrid>
                     <InfoAbout>
-                        <Subtitle>Personal  Infos</Subtitle>
+                        <Subtitle>Personal Infos</Subtitle>
 
                         <ListGrid>
                             <Info></Info>
                         </ListGrid>
 
                         <ButtonAbout to={'/'}>
-                            Download CV
+                            Download Cv
                             <IconAbout><FaDownload/></IconAbout>
                         </ButtonAbout>
                     </InfoAbout>
@@ -37,15 +46,40 @@ export function About() {
                     </StatsGrid>
                 </AboutContainerGrid>
             </AboutS>
-            <Separator>
 
-            </Separator>
+            <Separator/>
+
             <SkillsAbout>
                 <SectionSubTitle>My Skills</SectionSubTitle>
                 <SkillsContainerGrid>
-                    <Skill />
+                    <Skill/>
                 </SkillsContainerGrid>
             </SkillsAbout>
+
+            <Separator/>
+
+            <Resulme>
+                <SectionSubTitle>Experience & Education</SectionSubTitle>
+
+                <ResulmeContainerGrid>
+
+                    <ResulmeData>
+                        {resulme.map((val) => {
+                            if(val.category ==='Experience'){
+                                return <ResulmeItem key={val.id} {...val} />;
+                            }
+                        })}
+                    </ResulmeData>
+
+                    <ResulmeData>
+                        {resulme.map((val) => {
+                            if(val.category ==='education'){
+                                return <ResulmeItem key={val.id} {...val} />;
+                            }
+                        })}
+                    </ResulmeData>
+                </ResulmeContainerGrid>
+            </Resulme>
         </SectionContainer>
     );
 }

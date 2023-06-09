@@ -14,8 +14,8 @@ interface LinkProps {
 export const Link: React.FC<LinkProps> = ({ to, icon, children, onClick,isActive }) => {
     const handleClick = () => {
         if (onClick) {
-            const result = onClick(); // Chama a função onClick e obtém o resultado
-            console.log(result); // Exibe o resultado no console (você pode usar o resultado como desejar)
+            const result = onClick();
+            console.log(result);
         }
     };
 

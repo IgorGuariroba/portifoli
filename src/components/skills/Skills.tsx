@@ -11,16 +11,17 @@ export function Skill() {
                 <ProgressBox key={id}>
                     <ProgressCicle>
                         <CircularProgressbar
-                            strokeWidth={7.5}
-                            text={`${percentage}`}
+                            strokeWidth={5.5}
+                            text={`${percentage}%`}
                             value={percentage}
                             styles={{
                                 path: {
                                     stroke: theme.firstColor,
                                 },
                                 text: {
-                                    fill: theme.firstColor,
-                                    fontSize: '16px',
+                                    fill: theme.titleColor,
+                                    fontSize: theme.largeFontSize,
+                                    fontFamily: theme.secondFont,
                                 },
                             }}
                         />

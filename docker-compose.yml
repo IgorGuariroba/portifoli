@@ -6,9 +6,10 @@ services:
     volumes:
       - .:/app
     working_dir: /app
-    command: sh -c 'npm install -g npm@latest && npm install && npm run start'
+    command: sh -c 'npm install -g npm@latest && npm install && npm run start --force'
     ports:
       - "5173:5173"
+      - "4173:4173"
     networks:
       segundo_portfolio_network:
 

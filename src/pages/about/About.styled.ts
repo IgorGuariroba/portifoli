@@ -1,27 +1,31 @@
 import styled  from "styled-components";
 import {Button, Icon} from "../home/Home.styles.ts";
 
-/* ========= REUSABLE COMPONENTS ========= */
-// section padding-block: 70px;
-// grid display: grid; gap: 30px;
-// section__title font-size:big-font-size;  font-weight:800; text-align:center; margin-bottom:70px;
-// container max-width:1140px; margin-inline:auto;
 
 export const SectionContainer = styled.main`
-  max-width: 1140px;
+  max-width: 1040px;
   margin-inline: auto;
   padding-block: 4.3rem;
+  padding-inline: 0.93rem;
+  align-items: flex-start;
 
-  & span {
-    color: ${props => props.theme.firstColor};
+  @media screen and (min-width: 1040px) and (max-width: 1198px) {
+    max-width: 800px;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 `;
-export const AboutS = styled.section``;
+export const AboutS = styled.section`
+    
+`;
 export const Title = styled.h2`
   font-size: ${props => props.theme.bigFontSize};
   font-weight: ${props => props.theme.weigth800};
   text-align: center;
   margin-bottom: 4.3rem;
+  span:first-child {
+    color: ${props => props.theme.firstColor} !important;
+  }
 `;
 export const Grid = styled.div`
   display: grid;
@@ -30,6 +34,11 @@ export const Grid = styled.div`
 
 export const AboutContainerGrid = styled(Grid)`
   grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+
+  @media screen and (max-width: 926px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const InfoAbout = styled.div`
@@ -45,6 +54,15 @@ export const ListGrid = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   row-gap: 1.25rem;
   margin-bottom: 2rem;
+
+  @media screen and (min-width: 1040px) and (max-width: 1198px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (max-width: 926px) {
+    gap: 0.4rem;
+    max-width: 95%;
+  }
 `;
 export const ButtonAbout = styled(Button)``;
 export const IconAbout = styled(Icon)`
@@ -76,4 +94,22 @@ export const SkillsContainerGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   row-gap: 3rem;
   justify-items: center;
+  @media screen and (max-width: 926px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+export const Resulme = styled.section`
+
+`;
+export const ResulmeContainerGrid = styled.div`
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row;
+  align-items: flex-start;
+`;
+export const ResulmeData = styled.div`
+  max-width: 100%;
+  overflow: hidden;
 `;

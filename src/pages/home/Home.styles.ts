@@ -8,6 +8,18 @@ export const Grid = styled.section`
   align-items: center;
   padding: 2.5rem;
   height: 100vh;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  @media screen and (max-width: 1191px) {
+    justify-items: start
+  }
+
+  @media screen and (max-width: 1109px) {
+    justify-items: start
+  }
 `;
 export const Img = styled.img`
   height: 100%;
@@ -15,18 +27,32 @@ export const Img = styled.img`
   border-radius: 30px;
   box-shadow: 0 0 8px hsla(0,0%,0%,0.3);
   z-index: 1;
+  @media screen and (max-width: 1024px) { 
+    height: 60%;
+  }
+  @media screen and (max-width: 1191px) {
+    max-width: 90%;
+    max-height: 70%;
+  }
 `;
 export const Content = styled.div``;
 export const Data = styled.div`
   max-width: 37.5rem;
   margin-inline: auto;
   padding-top: 1.2rem;
+  @media screen and (min-width: 1026px) and (max-width: 1191px) {
+    max-width: 27.5rem;
+  }
 `;
 export const Title = styled.h1`
   position: relative;
   font-size: ${props => props.theme.h1FontSize};
   line-height: 1.24;
   padding-left: 4.3rem;
+
+  span:first-child {
+    color: ${props => props.theme.firstColor} !important;
+  }
   
   &::before {
     content: '';
@@ -100,4 +126,9 @@ export const ColorBlock = styled.div`
   top: -50%;
   left: -83%;
   transform: rotate(-15deg);
+
+  @media screen and (max-width: 1024px) {
+    transform: rotate(30deg);
+    top: -70%;
+  }
 `;
