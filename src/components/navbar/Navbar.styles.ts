@@ -21,6 +21,7 @@ export const Menu = styled.div<ToggleProps>`
   inset-block: 0;
   left: ${props => props.isOpen ? '0' : '-100%'};
   background-color: ${props => props.theme.containerColor};
+  z-index: 1000;
   width: 100%;
   padding: 3.75rem 1.87rem;
   transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1);
@@ -80,6 +81,7 @@ export const Toggle = styled(FontAwesomeIcon)`
   border-radius: 5px;
   padding: 0.2rem;
   background-color: ${props => props.theme.containerColor};
+  z-index: 1001;
 
   @media screen and (min-width: 1024px) {
     display: none;
