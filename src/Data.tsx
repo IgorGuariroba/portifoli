@@ -211,12 +211,12 @@ export const portfolio = [
     }, {
         id: 3,
         img: Work3,
-        title: 'Controle de Negociações',
+        title: 'Negociações',
         details: [
             {
                 icon: <FiFileText/>,
                 title: 'Project : ',
-                desc: 'Controle de Negociações',
+                desc: 'Negociações',
                 link: 'https://github.com/IgorGuariroba/controle-de-negociacoes',
             },
             {
@@ -234,7 +234,7 @@ export const portfolio = [
             {
                 icon: <FiExternalLink/>,
                 title: 'Link : ',
-                desc: 'Controle de Negociações',
+                desc: 'Negociações',
                 link: 'https://igorguariroba.github.io/controle-de-negociacoes/',
             },
         ],

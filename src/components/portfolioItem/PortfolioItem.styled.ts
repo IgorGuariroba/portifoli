@@ -69,6 +69,11 @@ export const PortfolioModalContent = styled.div`
     max-width: 25rem;
     padding: 0.9rem;
   }
+
+  @media screen and (max-width: 999px) {
+    max-width: 18rem;
+    max-height: 27rem;
+  }
 `;
 export const ModalClose = styled.span`
   width: 3.12rem;
@@ -81,6 +86,12 @@ export const ModalClose = styled.span`
   @media screen and (max-width: 1020px) {
     top: -7.5%;
     right: -9.5%;
+  }
+
+  @media screen and (max-width: 999px) {
+    top: -11.5%;
+    left: -3.5%;
+    filter: brightness(130%) saturate(120%);
   }
 `;
 
@@ -124,6 +135,9 @@ export const ModalImg = styled.img`
   width: 100%;
   height: 21.87rem;
   object-fit: cover;
+  @media screen and (max-width: 999px) {
+    height: 14rem;    
+  }
 `;
 
 export const ProtfolioLink = styled.a`
