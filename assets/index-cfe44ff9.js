@@ -154,7 +154,7 @@ Error generating stack: `+a.message+`
     gap: 0;
   }
 `,Mw=I.img`
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   border-radius: 30px;
   box-shadow: 0 0 8px hsla(0,0%,0%,0.3);
