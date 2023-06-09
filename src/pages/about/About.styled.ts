@@ -8,8 +8,16 @@ export const SectionContainer = styled.main`
   padding-block: 4.3rem;
   padding-inline: 0.93rem;
   align-items: flex-start;
+
+  @media screen and (min-width: 1040px) and (max-width: 1198px) {
+    max-width: 800px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
 `;
-export const AboutS = styled.section``;
+export const AboutS = styled.section`
+    
+`;
 export const Title = styled.h2`
   font-size: ${props => props.theme.bigFontSize};
   font-weight: ${props => props.theme.weigth800};
@@ -27,6 +35,10 @@ export const Grid = styled.div`
 export const AboutContainerGrid = styled(Grid)`
   grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
+
+  @media screen and (max-width: 926px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const InfoAbout = styled.div`
@@ -42,6 +54,15 @@ export const ListGrid = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   row-gap: 1.25rem;
   margin-bottom: 2rem;
+
+  @media screen and (min-width: 1040px) and (max-width: 1198px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (max-width: 926px) {
+    gap: 0.4rem;
+    max-width: 95%;
+  }
 `;
 export const ButtonAbout = styled(Button)``;
 export const IconAbout = styled(Icon)`
@@ -73,6 +94,9 @@ export const SkillsContainerGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   row-gap: 3rem;
   justify-items: center;
+  @media screen and (max-width: 926px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const Resulme = styled.section`

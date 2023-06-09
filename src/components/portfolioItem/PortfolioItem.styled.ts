@@ -64,6 +64,11 @@ export const PortfolioModalContent = styled.div`
   padding: 2rem;
   border-radius: 10px;
   position: relative;
+
+  @media screen and (max-width: 1020px) {
+    max-width: 25rem;
+    padding: 0.9rem;
+  }
 `;
 export const ModalClose = styled.span`
   width: 3.12rem;
@@ -72,6 +77,11 @@ export const ModalClose = styled.span`
   right: -8.5%;
   height: 3.12rem;
   filter: invert(0.8);
+
+  @media screen and (max-width: 1020px) {
+    top: -7.5%;
+    right: -9.5%;
+  }
 `;
 
 export const StyledIcon = styled(AiOutlineCloseCircle)`
