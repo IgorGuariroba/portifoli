@@ -129,6 +129,6 @@ export const ColorBlock = styled.div`
 
   @media screen and (max-width: 1024px) {
     transform: rotate(30deg);
-    top: -70%;
+    top: -90%;
   }
 `;

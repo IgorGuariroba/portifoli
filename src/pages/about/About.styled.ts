@@ -14,9 +14,12 @@ export const SectionContainer = styled.main`
     box-sizing: border-box;
     overflow: hidden;
   }
+
+  @media screen and (max-width: 999px) {
+    overflow-x: hidden;
+  }
 `;
 export const AboutS = styled.section`
-    
 `;
 export const Title = styled.h2`
   font-size: ${props => props.theme.bigFontSize};
@@ -47,6 +50,10 @@ export const Subtitle = styled.h3`
   font-size: ${props => props.theme.h3FontSize};
   font-weight: ${props => props.theme.weigth600};
   margin-bottom: 1.25rem;
+  @media screen and (max-width: 926px) {
+    text-align: center;
+    max-width: 89%;
+  }
 `;
 export const ListGrid = styled.ul`
   display: grid;
@@ -61,7 +68,9 @@ export const ListGrid = styled.ul`
 
   @media screen and (max-width: 926px) {
     gap: 0.4rem;
-    max-width: 95%;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 20rem;
+    margin-left: 0.8rem;
   }
 `;
 export const ButtonAbout = styled(Button)``;
@@ -71,6 +80,9 @@ export const IconAbout = styled(Icon)`
 
 export const StatsGrid = styled(Grid)`
   grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 926px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Separator = styled.div`
@@ -108,6 +120,9 @@ export const ResulmeContainerGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: row;
   align-items: flex-start;
+  @media screen and (max-width: 926px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 export const ResulmeData = styled.div`
   max-width: 100%;
