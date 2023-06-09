@@ -1,5 +1,7 @@
-import {FaBriefcase, FaGraduationCap} from "react-icons/fa";
+import {FaBriefcase, FaCode, FaGraduationCap} from "react-icons/fa";
+import {FiExternalLink, FiFileText, FiUser} from "react-icons/fi";
 
+const Work1 = 'https://media.licdn.com/dms/image/C4D22AQHHPUsAP3xBQA/feedshare-shrink_800/0/1664493053918?e=1689206400&v=beta&t=CPfY75PSIcAnbAodu_P6wNlpUD7Nu7VnyFhrWryT_y4';
 export const personalInfo = [
     {
         id: 1,
@@ -138,6 +140,116 @@ export const resulme = [
         years: '2019 - 2020',
         title: 'Technologist in Systems Analysis and Development <span>UMC</span>',
         desc: 'Higher education',
+    },
+
+];
+
+export const portfolio = [
+    {
+        id: 1,
+        img: Work1,
+        title: 'Photo Editing',
+        details: [
+            {
+                icon: <FiFileText/>,
+                title: 'Project :',
+                desc: 'Photo',
+            },
+            {
+                icon: <FiUser/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+            {
+                icon: <FaCode/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+            {
+                icon: <FiExternalLink/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+        ],
+    }, {
+        id: 2,
+        img: Work1,
+        title: 'Photo Editing',
+        details: [
+            {
+                icon: <FiFileText/>,
+                title: 'Project :',
+                desc: 'Photo',
+            },
+            {
+                icon: <FiUser/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+            {
+                icon: <FaCode/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+            {
+                icon: <FiExternalLink/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+        ],
+    }, {
+        id: 3,
+        img: Work1,
+        title: 'Photo Editing',
+        details: [
+            {
+                icon: <FiFileText/>,
+                title: 'Project :',
+                desc: 'Photo',
+            },
+            {
+                icon: <FiUser/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+            {
+                icon: <FaCode/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+            {
+                icon: <FiExternalLink/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+        ],
+    },
+    {
+        id: 4,
+        img: Work1,
+        title: 'Photo Editing',
+        details: [
+            {
+                icon: <FiFileText/>,
+                title: 'Project :',
+                desc: 'Photo',
+            },
+            {
+                icon: <FiUser/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+            {
+                icon: <FaCode/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+            {
+                icon: <FiExternalLink/>,
+                title: 'Client :',
+                desc: 'Dribble',
+            },
+        ],
     },
 
 ];

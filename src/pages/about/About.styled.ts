@@ -1,17 +1,12 @@
 import styled  from "styled-components";
 import {Button, Icon} from "../home/Home.styles.ts";
 
-/* ========= REUSABLE COMPONENTS ========= */
-// section padding-block: 70px;
-// grid display: grid; gap: 30px;
-// section__title font-size:big-font-size;  font-weight:800; text-align:center; margin-bottom:70px;
-// container max-width:1140px; margin-inline:auto;
 
 export const SectionContainer = styled.main`
   max-width: 1040px;
   margin-inline: auto;
   padding-block: 4.3rem;
-  padding-inline: 15px;
+  padding-inline: 0.93rem;
   align-items: flex-start;
 `;
 export const AboutS = styled.section``;
@@ -31,6 +26,7 @@ export const Grid = styled.div`
 
 export const AboutContainerGrid = styled(Grid)`
   grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
 `;
 
 export const InfoAbout = styled.div`
@@ -87,6 +83,7 @@ export const ResulmeContainerGrid = styled.div`
   gap: 1.8rem;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: row;
+  align-items: flex-start;
 `;
 export const ResulmeData = styled.div`
   max-width: 100%;

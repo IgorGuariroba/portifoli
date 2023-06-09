@@ -48,3 +48,27 @@ export const GlobalStyle = createGlobalStyle`
     max-width: 100%;
   }
 `;
+
+
+/* ========= REUSABLE COMPONENTS ========= */
+// section
+// padding-block: 4.37rem;
+
+// grid
+// display: grid;
+// gap: 1.87rem;
+
+// section__title
+// font-size: ${props => props.theme.bigFontSize};
+// font-weight: ${props => props.theme.weigth800};
+// text-align: center;
+// margin-bottom: 4.37rem;
+// span:first-child {
+//     color: ${props => props.theme.firstColor} !important;
+// }
+
+
+// container
+// max-width:1140px;
+// margin-inline:auto;
+// padding-inline: 0.93rem
