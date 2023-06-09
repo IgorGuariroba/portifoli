@@ -7,14 +7,15 @@ import {
     PortfolioImg,
     PortfolioItemStyled,
     PortfolioModal, PortfolioModalContent,
-    PortfolioTitle, SpanItemDetails, SpanItemTitle
+    PortfolioTitle, SpanItemDetails, SpanItemTitle, ProtfolioLink
 } from "./PortfolioItem.styled.ts";
 
 
 interface Detail {
     icon?: ReactNode | null,
     title: string,
-    desc: string
+    desc: string,
+    link?: string,
 }
 
 interface PortfolioItemProps {
@@ -42,14 +43,20 @@ export function PortfolioItem({img, title, details}: PortfolioItemProps) {
                         <ModalClose onClick={toggleModal}><StyledIcon/></ModalClose>
                         <ModalTitle>{title}</ModalTitle>
                         <ModalListGrid>
-                            {details.map(({icon, title, desc}, index ) => {
+                            {details.map(({icon, title, desc, link}, index ) => {
                                 return (
                                     <ModalItem key={index}>
                                         <ItemIcon>{icon}</ItemIcon>
 
                                         <div>
                                             <SpanItemTitle>{title}</SpanItemTitle>
-                                            <SpanItemDetails>{desc}</SpanItemDetails>
+                                            {link ? (
+                                                <ProtfolioLink href={link} target="_blank" rel="noopener noreferrer">
+                                                    <SpanItemDetails>{desc}</SpanItemDetails>
+                                                </ProtfolioLink>
+                                            ) : (
+                                                <SpanItemDetails>{desc}</SpanItemDetails>
+                                            )}
                                         </div>
                                     </ModalItem>
                                 );

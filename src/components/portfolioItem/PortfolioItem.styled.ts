@@ -5,6 +5,10 @@ export const PortfolioImg = styled.img`
   height: 15.65rem;
   object-fit: cover;
   vertical-align: middle;
+
+  @media screen and (max-width: 1020px) {
+    height: 100%;
+  }
 `;
 export const PortfolioHover = styled.div`
   background-color: ${props => props.theme.firstColor};
@@ -36,6 +40,10 @@ export const PortfolioItemStyled = styled.div`
   
   &:hover ${PortfolioTitle} {
     transform: translateY(0);
+  }
+
+  @media screen and (max-width: 1020px) {
+    height: 37.5rem;
   }
 `;
 
@@ -106,4 +114,8 @@ export const ModalImg = styled.img`
   width: 100%;
   height: 21.87rem;
   object-fit: cover;
+`;
+
+export const ProtfolioLink = styled.a`
+
 `;

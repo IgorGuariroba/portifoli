@@ -21,6 +21,19 @@ export const PortifolioContainerGrid = styled.div`
    max-width:1140px;
    margin-inline:auto;
    padding-inline: 0.93rem;
-  
+
   grid-template-columns: repeat(3, 1fr);
+  
+  @media screen and (max-width: 1280px) {
+    max-width: 1000px;
+  }
+  
+  @media screen and (max-width: 1120px) {
+    max-width: 800px;
+  }
+
+  @media screen and (max-width: 1020px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
 `;

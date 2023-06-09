@@ -2,6 +2,9 @@ import {FaBriefcase, FaCode, FaGraduationCap} from "react-icons/fa";
 import {FiExternalLink, FiFileText, FiUser} from "react-icons/fi";
 
 const Work1 = 'https://media.licdn.com/dms/image/C4D22AQHHPUsAP3xBQA/feedshare-shrink_800/0/1664493053918?e=1689206400&v=beta&t=CPfY75PSIcAnbAodu_P6wNlpUD7Nu7VnyFhrWryT_y4';
+const Work2 = 'https://github.com/RafaelGoulartB/proffy/blob/master/.github/web-landing.png?raw=true';
+const Work3 = 'https://camo.githubusercontent.com/0b1f46813c44f5e6f87be2b65ccfb72c4cc9952d92338139668d123815605189/68747470733a2f2f692e696d6775722e636f6d2f5338384b7352692e676966';
+const Work4 = 'https://tavanoblog.com.br/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Ftavanoblog%2Fc9f2760f-5fc0-4b64-af29-b3ed8f5cad4b_Card%2B3D%2B%25282%2529.jpg%3Fauto%3Dcompress%2Cformat&w=1920&q=75';
 export const personalInfo = [
     {
         id: 1,
@@ -148,106 +151,122 @@ export const portfolio = [
     {
         id: 1,
         img: Work1,
-        title: 'Photo Editing',
+        title: 'To-do List',
         details: [
             {
                 icon: <FiFileText/>,
-                title: 'Project :',
-                desc: 'Photo',
+                title: 'Project : ',
+                desc: 'To-do List',
+                link: 'https://github.com/IgorGuariroba/toDoList',
             },
             {
                 icon: <FiUser/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'author : ',
+                desc: 'Igor Guariroba',
+                link: 'https://github.com/IgorGuariroba',
             },
             {
                 icon: <FaCode/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Code : ',
+                desc: 'React Typescript',
+                link: 'https://www.typescriptlang.org/pt/docs/handbook/react.html',
             },
             {
                 icon: <FiExternalLink/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Link : ',
+                desc: 'toDoList',
+                link: 'https://igorguariroba.github.io/toDoList/',
             },
         ],
     }, {
         id: 2,
-        img: Work1,
-        title: 'Photo Editing',
+        img: Work2,
+        title: 'Proffy',
         details: [
             {
                 icon: <FiFileText/>,
-                title: 'Project :',
-                desc: 'Photo',
+                title: 'Project : ',
+                desc: 'Proffy',
+                link: 'https://github.com/IgorGuariroba/proffy',
             },
             {
                 icon: <FiUser/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Author : ',
+                desc: 'Igor Guariroba',
+                link: 'https://github.com/IgorGuariroba',
             },
             {
                 icon: <FaCode/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Code : ',
+                desc: 'React Typescript',
+                link: 'https://www.typescriptlang.org/pt/docs/handbook/react.html',
             },
             {
                 icon: <FiExternalLink/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Link : ',
+                desc: 'Proffy',
+                link: 'https://igorguariroba.github.io/proffy/',
             },
         ],
     }, {
         id: 3,
-        img: Work1,
-        title: 'Photo Editing',
+        img: Work3,
+        title: 'Controle de Negociações',
         details: [
             {
                 icon: <FiFileText/>,
-                title: 'Project :',
-                desc: 'Photo',
+                title: 'Project : ',
+                desc: 'Controle de Negociações',
+                link: 'https://github.com/IgorGuariroba/controle-de-negociacoes',
             },
             {
                 icon: <FiUser/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Author : ',
+                desc: 'Igor Guariroba',
+                link: 'https://github.com/IgorGuariroba',
             },
             {
                 icon: <FaCode/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Code : ',
+                desc: 'JavaScript',
+                link: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
             },
             {
                 icon: <FiExternalLink/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Link : ',
+                desc: 'Controle de Negociações',
+                link: 'https://igorguariroba.github.io/controle-de-negociacoes/',
             },
         ],
     },
     {
         id: 4,
-        img: Work1,
-        title: 'Photo Editing',
+        img: Work4,
+        title: 'TabNews',
         details: [
             {
                 icon: <FiFileText/>,
-                title: 'Project :',
-                desc: 'Photo',
+                title: 'Project : ',
+                desc: 'TabNews',
+                link: 'https://github.com/IgorGuariroba/clone-tabnews',
             },
             {
                 icon: <FiUser/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Author : ',
+                desc: 'Igor Guariroba',
+                link: 'https://github.com/IgorGuariroba',
             },
             {
                 icon: <FaCode/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Code : ',
+                desc: 'Next.js',
+                link: 'https://nextjs.org/',
             },
             {
                 icon: <FiExternalLink/>,
-                title: 'Client :',
-                desc: 'Dribble',
+                title: 'Link : ',
+                desc: 'TabNews',
+                link: 'https://clone-tabnews-ten-sage.vercel.app/',
             },
         ],
     },
