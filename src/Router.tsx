@@ -2,7 +2,7 @@ import {Route, Routes} from "react-router-dom";
 import {Home} from "./pages/home/Home.tsx";
 import {About} from "./pages/about/About.tsx";
 import {Portfolio} from "./pages/portfolio/Portfolio.tsx";
-import {Contact} from "./pages/Contact.tsx";
+import {Contact} from "./pages/contact/Contact.tsx";
 import {DefaultsLayout} from "./layouts/DefaultsLayout.tsx";
 
 export function Router() {
