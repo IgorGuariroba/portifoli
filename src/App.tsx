@@ -3,10 +3,15 @@ import {defaultTheme} from "./styles/themes/default.ts";
 import {GlobalStyle} from "./styles/global.ts";
 import {BrowserRouter} from "react-router-dom";
 import {Router} from "./Router.tsx";
+import {Themes} from "./components/themes/Themes.tsx";
+import {useState} from "react";
 
 export function App() {
+    const [updatedTheme, setUpdatedTheme] = useState(defaultTheme);
     return (
-        <ThemeProvider theme={defaultTheme}>
+
+        <ThemeProvider theme={updatedTheme} >
+            <Themes setUpdatedTheme={setUpdatedTheme}/>
             <BrowserRouter>
                 <Router/>
             </BrowserRouter>

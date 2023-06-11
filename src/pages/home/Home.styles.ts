@@ -26,13 +26,14 @@ export const Grid = styled.section`
   }
 `;
 export const Img = styled.img`
-  height: 90%;
+  height: 100%;
+  max-width: 90%;
   object-fit: cover;
   border-radius: 30px;
   box-shadow: 0 0 8px hsla(0,0%,0%,0.3);
   z-index: 1;
   @media screen and (max-width: 1024px) { 
-    height: 60%;
+    height: 90%;
   }
   @media screen and (max-width: 1191px) {
     max-width: 90%;

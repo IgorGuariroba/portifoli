@@ -5,6 +5,18 @@ const Work1 = 'https://media.licdn.com/dms/image/C4D22AQHHPUsAP3xBQA/feedshare-s
 const Work2 = 'https://github.com/RafaelGoulartB/proffy/blob/master/.github/web-landing.png?raw=true';
 const Work3 = 'https://camo.githubusercontent.com/0b1f46813c44f5e6f87be2b65ccfb72c4cc9952d92338139668d123815605189/68747470733a2f2f692e696d6775722e636f6d2f5338384b7352692e676966';
 const Work4 = 'https://tavanoblog.com.br/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Ftavanoblog%2Fc9f2760f-5fc0-4b64-af29-b3ed8f5cad4b_Card%2B3D%2B%25282%2529.jpg%3Fauto%3Dcompress%2Cformat&w=1920&q=75';
+
+import Theme1 from '/assets/purple.png';
+import Theme2 from '/assets/red.png';
+import Theme3 from '/assets/blueviolet.png';
+import Theme4 from '/assets/blue.png';
+import Theme5 from '/assets/goldenrod.png';
+import Theme6 from '/assets/magenta.png';
+import Theme7 from '/assets/yellowgreen.png';
+import Theme8 from '/assets/orange.png';
+import Theme9 from '/assets/green.png';
+import Theme10 from '/assets/yellow.png';
+
 export const personalInfo = [
     {
         id: 1,
@@ -271,4 +283,66 @@ export const portfolio = [
         ],
     },
 
+];
+
+export const themes = [
+    {
+        id: 1,
+        img: Theme1,
+        color: 'hsl(252, 35%, 51%)',
+    },
+
+    {
+        id: 2,
+        img: Theme2,
+        color: 'hsl(4, 93%, 54%)',
+    },
+
+    {
+        id: 3,
+        img: Theme3,
+        color: 'hsl(271, 76%, 53%)',
+    },
+
+    {
+        id: 4,
+        img: Theme4,
+        color: 'hsl(225, 73%, 57%)',
+    },
+
+    {
+        id: 5,
+        img: Theme5,
+        color: 'hsl(43, 74%, 49%)',
+    },
+
+    {
+        id: 6,
+        img: Theme6,
+        color: 'hsl(339, 81%, 66%)',
+    },
+
+    {
+        id: 7,
+        img: Theme7,
+        color: 'hsl(80, 61%, 50%)',
+    },
+
+    {
+        id: 8,
+        img: Theme8,
+        color: 'hsl(19, 96%, 52%)',
+    },
+
+    {
+        id: 9,
+        img: Theme9,
+        color: 'hsl(88, 65%, 43%)',
+    },
+
+    {
+        id: 10,
+        img: Theme10,
+        color: 'hsl(42, 100%, 50%)',
+    },
 ];

@@ -35,5 +35,9 @@ export const PortifolioContainerGrid = styled.div`
   @media screen and (max-width: 1020px) {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  @media screen and (max-width: 1300px) {
+    width: 77%;
+  }
   
 `;
