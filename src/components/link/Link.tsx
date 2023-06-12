@@ -12,7 +12,7 @@ interface LinkProps {
 
 export const Link: React.FC<LinkProps> = ({ to, icon, children}) => {
         return (
-        <StyledLink to={to} activeClassName="active">
+        <StyledLink to={to}>
             <Icon icon={icon} />
             {children}
         </StyledLink>
