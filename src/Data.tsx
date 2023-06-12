@@ -1,11 +1,6 @@
 import {FaBriefcase, FaCode, FaGraduationCap} from "react-icons/fa";
 import {FiExternalLink, FiFileText, FiUser} from "react-icons/fi";
-
-const Work1 = 'https://media.licdn.com/dms/image/C4D22AQHHPUsAP3xBQA/feedshare-shrink_800/0/1664493053918?e=1689206400&v=beta&t=CPfY75PSIcAnbAodu_P6wNlpUD7Nu7VnyFhrWryT_y4';
-const Work2 = 'https://github.com/RafaelGoulartB/proffy/blob/master/.github/web-landing.png?raw=true';
-const Work3 = 'https://camo.githubusercontent.com/0b1f46813c44f5e6f87be2b65ccfb72c4cc9952d92338139668d123815605189/68747470733a2f2f692e696d6775722e636f6d2f5338384b7352692e676966';
-const Work4 = 'https://tavanoblog.com.br/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Ftavanoblog%2Fc9f2760f-5fc0-4b64-af29-b3ed8f5cad4b_Card%2B3D%2B%25282%2529.jpg%3Fauto%3Dcompress%2Cformat&w=1920&q=75';
-
+import {differenceInYears, parseISO} from "date-fns";
 import Theme1 from '/assets/purple.png';
 import Theme2 from '/assets/red.png';
 import Theme3 from '/assets/blueviolet.png';
@@ -16,6 +11,14 @@ import Theme7 from '/assets/yellowgreen.png';
 import Theme8 from '/assets/orange.png';
 import Theme9 from '/assets/green.png';
 import Theme10 from '/assets/yellow.png';
+
+
+const date = parseISO('1996-06-05T00:00:00.000Z');
+const years = differenceInYears(new Date(), date);
+const Work1 = 'https://media.licdn.com/dms/image/C4D22AQHHPUsAP3xBQA/feedshare-shrink_800/0/1664493053918?e=1689206400&v=beta&t=CPfY75PSIcAnbAodu_P6wNlpUD7Nu7VnyFhrWryT_y4';
+const Work2 = 'https://github.com/RafaelGoulartB/proffy/blob/master/.github/web-landing.png?raw=true';
+const Work3 = 'https://camo.githubusercontent.com/0b1f46813c44f5e6f87be2b65ccfb72c4cc9952d92338139668d123815605189/68747470733a2f2f692e696d6775722e636f6d2f5338384b7352692e676966';
+const Work4 = 'https://tavanoblog.com.br/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Ftavanoblog%2Fc9f2760f-5fc0-4b64-af29-b3ed8f5cad4b_Card%2B3D%2B%25282%2529.jpg%3Fauto%3Dcompress%2Cformat&w=1920&q=75';
 
 export const personalInfo = [
     {
@@ -31,8 +34,7 @@ export const personalInfo = [
     {
         id: 3,
         title: "Age",
-        description: "1996-06-05T00:00:00.000Z",
-        years: "1996-06-05T00:00:00.000Z",
+        description: years,
     },
     {
         id: 4,
