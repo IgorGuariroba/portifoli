@@ -8,19 +8,11 @@ interface LinkProps {
     icon: IconProp;
     children: React.ReactNode;
     onClick?: () => void;
-    isActive?: any;
 }
 
-export const Link: React.FC<LinkProps> = ({ to, icon, children, onClick,isActive }) => {
-    const handleClick = () => {
-        if (onClick) {
-            const result = onClick();
-            console.log(result);
-        }
-    };
-
-    return (
-        <StyledLink to={to} onClick={handleClick} isActive={isActive}>
+export const Link: React.FC<LinkProps> = ({ to, icon, children}) => {
+        return (
+        <StyledLink to={to}>
             <Icon icon={icon} />
             {children}
         </StyledLink>

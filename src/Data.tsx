@@ -32,6 +32,7 @@ export const personalInfo = [
         id: 3,
         title: "Age",
         description: "1996-06-05T00:00:00.000Z",
+        years: "1996-06-05T00:00:00.000Z",
     },
     {
         id: 4,
