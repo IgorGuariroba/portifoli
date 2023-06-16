@@ -12,7 +12,7 @@ import Theme8 from '/assets/orange.png';
 import Theme9 from '/assets/green.png';
 import Theme10 from '/assets/yellow.png';
 
-
+const Work0 = 'https://user-images.githubusercontent.com/32397288/183467598-38f16b0e-e6af-431a-86b1-aaf6c9712ce5.PNG';
 const date = parseISO('1996-06-05T00:00:00.000Z');
 const years = differenceInYears(new Date(), date);
 const Work1 = 'https://media.licdn.com/dms/image/C4D22AQHHPUsAP3xBQA/feedshare-shrink_800/0/1664493053918?e=1689206400&v=beta&t=CPfY75PSIcAnbAodu_P6wNlpUD7Nu7VnyFhrWryT_y4';
@@ -164,7 +164,69 @@ export const resulme = [
 
 export const portfolio = [
     {
+        id: 0,
+        img: Work0,
+        title: 'Time',
+        details: [
+            {
+                icon: <FiFileText/>,
+                title: 'Project : ',
+                desc: 'To-do List',
+                link: 'https://github.com/IgorGuariroba/time',
+            },
+            {
+                icon: <FiUser/>,
+                title: 'author : ',
+                desc: 'Igor Guariroba',
+                link: 'https://github.com/IgorGuariroba',
+            },
+            {
+                icon: <FaCode/>,
+                title: 'Code : ',
+                desc: 'Next.js',
+                link: 'https://nextjs.org/',
+            },
+            {
+                icon: <FiExternalLink/>,
+                title: 'Link : ',
+                desc: 'Time',
+                link: 'https://igorguariroba.github.io/time/',
+            },
+        ],
+    },
+    {
         id: 1,
+        img: 'https://user-images.githubusercontent.com/104109951/209418651-0189c6d3-fa67-421e-b5c0-7fbf64d29151.png',
+        title: 'Bateria',
+        details: [
+            {
+                icon: <FiFileText/>,
+                title: 'Project : ',
+                desc: 'Bateria',
+                link: 'https://github.com/IgorGuariroba/alura-midi',
+            },
+            {
+                icon: <FiUser/>,
+                title: 'author : ',
+                desc: 'Igor Guariroba',
+                link: 'https://github.com/IgorGuariroba',
+            },
+            {
+                icon: <FaCode/>,
+                title: 'Code : ',
+                desc: 'JavaScript',
+                link: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
+            },
+            {
+                icon: <FiExternalLink/>,
+                title: 'Link : ',
+                desc: 'Bateria',
+                link: 'https://igorguariroba.github.io/alura-midi/',
+            },
+        ],
+    },
+    {
+        id: 2,
         img: Work1,
         title: 'To-do List',
         details: [
@@ -193,8 +255,71 @@ export const portfolio = [
                 link: 'https://igorguariroba.github.io/toDoList/',
             },
         ],
-    }, {
-        id: 2,
+    },
+    {
+        id: 3,
+        img: 'https://s3-alpha.figma.com/hub/file/3581505649/5a839d3a-a09d-40e2-95bc-20abb4128045-cover.png',
+        title: 'Agenda',
+        details: [
+            {
+                icon: <FiFileText/>,
+                title: 'Project : ',
+                desc: 'To-do List',
+                link: 'https://github.com/IgorGuariroba/coffe-delivery',
+            },
+            {
+                icon: <FiUser/>,
+                title: 'author : ',
+                desc: 'Igor Guariroba',
+                link: 'https://github.com/IgorGuariroba',
+            },
+            {
+                icon: <FaCode/>,
+                title: 'Code : ',
+                desc: 'Next.js',
+                link: 'https://nextjs.org/',
+            },
+            {
+                icon: <FiExternalLink/>,
+                title: 'Link : ',
+                desc: 'toDoList',
+                link: 'https://coffe-delivery-blue.vercel.app/',
+            },
+        ],
+    },
+    {
+        id: 4,
+        img: Work1,
+        title: 'To-do List',
+        details: [
+            {
+                icon: <FiFileText/>,
+                title: 'Project : ',
+                desc: 'To-do List',
+                link: 'https://github.com/IgorGuariroba/toDoList',
+            },
+            {
+                icon: <FiUser/>,
+                title: 'author : ',
+                desc: 'Igor Guariroba',
+                link: 'https://github.com/IgorGuariroba',
+            },
+            {
+                icon: <FaCode/>,
+                title: 'Code : ',
+                desc: 'React Typescript',
+                link: 'https://www.typescriptlang.org/pt/docs/handbook/react.html',
+            },
+            {
+                icon: <FiExternalLink/>,
+                title: 'Link : ',
+                desc: 'toDoList',
+                link: 'https://igorguariroba.github.io/site-viagem/index.html',
+            },
+        ],
+    },
+    {
+        id: 5,
         img: Work2,
         title: 'Proffy',
         details: [
@@ -224,7 +349,7 @@ export const portfolio = [
             },
         ],
     }, {
-        id: 3,
+        id: 6,
         img: Work3,
         title: 'Negociações',
         details: [
@@ -255,7 +380,7 @@ export const portfolio = [
         ],
     },
     {
-        id: 4,
+        id: 7,
         img: Work4,
         title: 'TabNews',
         details: [
