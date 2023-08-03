@@ -4,15 +4,17 @@ import {
     StyledSwitcherItems,
     StyledSwitcherTitle,
     StyledSwitcherToggler,
-    ThemeToggler
+    ThemeToggler,
+    StyledButton
 } from "./Themes.styled.ts";
-import {FaCog} from "react-icons/fa";
+import {FaCog, FaFlagUsa} from "react-icons/fa";
 import {BsMoon, BsSun} from "react-icons/bs";
 import {themes} from "../../Data.tsx";
 import {ThemesItem} from "../themesItem/ThemesItem.tsx";
 import {useEffect, useState} from "react";
 import {blackTheme} from "../../styles/themes/blackTheme.ts";
 import {lightTheme} from "../../styles/themes/lightTheme.ts";
+import {GiBrazilFlag} from "react-icons/gi";
 
 interface ThemesProps {
     setUpdatedTheme: (theme: typeof blackTheme) => void;
@@ -80,6 +82,12 @@ export function Themes({setUpdatedTheme}: ThemesProps) {
         setUpdatedTheme(newTheme);
     }, [theme]);
 
+    const [activeFlag, setActiveFlag] = useState('usa');
+
+    const toggleActiveFlag = () => {
+        setActiveFlag(activeFlag === 'usa' ? 'brazil' : 'usa');
+    }
+
     return (<>
         <StyledSwitcher showSwitcher={showSwitcher}>
             <StyledSwitcherToggler showSwitcher={showSwitcher} onClick={handleClick}>
@@ -89,6 +97,10 @@ export function Themes({setUpdatedTheme}: ThemesProps) {
             <ThemeToggler showSwitcher={showSwitcher} onClick={toggleTheme}>
                 {toogleTheme ? <BsSun/> : <BsMoon/>}
             </ThemeToggler>
+
+            <StyledButton showSwitcher={showSwitcher} onClick={toggleActiveFlag}>
+                {activeFlag === 'usa' ? <FaFlagUsa/> : <GiBrazilFlag/>}
+            </StyledButton>
 
             <StyledSwitcherTitle>Style Switcher</StyledSwitcherTitle>
 

@@ -78,3 +78,21 @@ export const StyledSwitcherClose = styled.div`
   top: 2%;
   right: 0.9rem;
 `;
+
+
+export const StyledButton = styled.button<StyledSwitcherProps>`
+  border-radius: 0 5px 5px 0;
+  color: hsl(0, 0%, 40%);
+  position: absolute;
+  background-color: ${props => props.theme.textWhite};
+  height: 3.12rem;
+  width: 3.12rem;
+  font-size: ${props => props.theme.largeFontSize};
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 2px hsl(0,0%, 80%);
+  transition: all 0.3s ease;
+  left: ${(props) => (props.showSwitcher ? '-100%' : '100%')};
+  top: 95% // Isso vai mover o botão um pouco para baixo.
+`;

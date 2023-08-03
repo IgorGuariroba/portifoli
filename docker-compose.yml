@@ -15,7 +15,3 @@ services:
 
 networks:
   segundo_portfolio_network:
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.20.0.0/16
