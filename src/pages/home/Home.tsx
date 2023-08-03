@@ -10,7 +10,7 @@ export function Home() {
             <Content>
                 <Data>
                     <Title>
-                        {t("iam")}<Span>Developer</Span>
+                        {t("iam")}<Span>{t("dev")}</Span>
                     </Title>
 
                     <Description>

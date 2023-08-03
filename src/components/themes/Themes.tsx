@@ -40,11 +40,22 @@ const getTheme = () => {
     return theme;
 }
 
+const getLanguage = () => {
+    let language = 'en';
+    const storedLanguage = localStorage.getItem('language');
+
+    if (storedLanguage) {
+        language = storedLanguage;
+    }
+    return language;
+}
+
 export function Themes({setUpdatedTheme}: ThemesProps) {
     const [showSwitcher, setShowSwitcher] = useState(false);
     const [color, setColor] = useState(getStorageColor());
     const [theme, setTheme] = useState(getTheme());
     const [toogleTheme, setToogleTheme] = useState(false);
+    const [activeFlag, setActiveFlag] = useState(getLanguage());
 
 
     const handleClick = () => {
@@ -82,10 +93,10 @@ export function Themes({setUpdatedTheme}: ThemesProps) {
         setUpdatedTheme(newTheme);
     }, [theme]);
 
-    const [activeFlag, setActiveFlag] = useState('usa');
 
     const toggleActiveFlag = () => {
-        setActiveFlag(activeFlag === 'usa' ? 'brazil' : 'usa');
+        setActiveFlag(activeFlag === 'en' ? 'ptBR' : 'en');
+        localStorage.setItem('language', activeFlag );
     }
 
     return (<>
@@ -99,7 +110,7 @@ export function Themes({setUpdatedTheme}: ThemesProps) {
             </ThemeToggler>
 
             <StyledButton showSwitcher={showSwitcher} onClick={toggleActiveFlag}>
-                {activeFlag === 'usa' ? <FaFlagUsa/> : <GiBrazilFlag/>}
+                {activeFlag === 'en' ? <FaFlagUsa/> : <GiBrazilFlag/>}
             </StyledButton>
 
             <StyledSwitcherTitle>Style Switcher</StyledSwitcherTitle>
