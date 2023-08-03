@@ -15,7 +15,7 @@ import {useEffect, useState} from "react";
 import {blackTheme} from "../../styles/themes/blackTheme.ts";
 import {lightTheme} from "../../styles/themes/lightTheme.ts";
 import {GiBrazilFlag} from "react-icons/gi";
-
+import Flag from 'react-flagkit';
 interface ThemesProps {
     setUpdatedTheme: (theme: typeof blackTheme) => void;
 }
@@ -96,7 +96,7 @@ export function Themes({setUpdatedTheme}: ThemesProps) {
 
     const toggleActiveFlag = () => {
         setActiveFlag(activeFlag === 'en' ? 'ptBR' : 'en');
-        localStorage.setItem('language', activeFlag );
+        localStorage.setItem('language', activeFlag);
     }
 
     return (<>
@@ -110,7 +110,7 @@ export function Themes({setUpdatedTheme}: ThemesProps) {
             </ThemeToggler>
 
             <StyledButton showSwitcher={showSwitcher} onClick={toggleActiveFlag}>
-                {activeFlag === 'en' ? <FaFlagUsa/> : <GiBrazilFlag/>}
+                {activeFlag === 'en' ? <Flag country="US"/> : <Flag country="BR"/>}
             </StyledButton>
 
             <StyledSwitcherTitle>Style Switcher</StyledSwitcherTitle>
