@@ -7,14 +7,13 @@ import {
     ThemeToggler,
     StyledButton
 } from "./Themes.styled.ts";
-import {FaCog, FaFlagUsa} from "react-icons/fa";
+import {FaCog} from "react-icons/fa";
 import {BsMoon, BsSun} from "react-icons/bs";
 import {themes} from "../../Data.tsx";
 import {ThemesItem} from "../themesItem/ThemesItem.tsx";
 import {useEffect, useState} from "react";
 import {blackTheme} from "../../styles/themes/blackTheme.ts";
 import {lightTheme} from "../../styles/themes/lightTheme.ts";
-import {GiBrazilFlag} from "react-icons/gi";
 import Flag from 'react-flagkit';
 interface ThemesProps {
     setUpdatedTheme: (theme: typeof blackTheme) => void;
