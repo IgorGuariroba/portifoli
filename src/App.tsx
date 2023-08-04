@@ -4,14 +4,20 @@ import {GlobalStyle} from "./styles/global.ts";
 import {BrowserRouter} from "react-router-dom";
 import {Router} from "./Router.tsx";
 import {Themes} from "./components/themes/Themes.tsx";
-import {useState} from "react";
-import './i18n/i18n.ts'
+import {useEffect, useState} from "react";
+import i18n from "./i18n/i18n.ts";
 
 export function App() {
     const [updatedTheme, setUpdatedTheme] = useState(defaultTheme);
+    const [updatedLanguage, setUpdatedLanguage ] =  useState('en');
+
+    useEffect(() => {
+        i18n.changeLanguage(updatedLanguage).then()
+    }, [updatedLanguage]);
+
     return (
         <ThemeProvider theme={updatedTheme}>
-            <Themes setUpdatedTheme={setUpdatedTheme}/>
+            <Themes setUpdatedTheme={setUpdatedTheme} setUpdatedLanguage={setUpdatedLanguage}/>
             <BrowserRouter>
                 <Router/>
             </BrowserRouter>

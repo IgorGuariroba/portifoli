@@ -17,7 +17,10 @@ import {lightTheme} from "../../styles/themes/lightTheme.ts";
 import Flag from 'react-flagkit';
 interface ThemesProps {
     setUpdatedTheme: (theme: typeof blackTheme) => void;
+    setUpdatedLanguage: (language: string) => void;
 }
+
+
 
 const getStorageColor = () => {
     let color = 'hsl(271, 76%, 53%)';
@@ -49,7 +52,7 @@ const getLanguage = () => {
     return language;
 }
 
-export function Themes({setUpdatedTheme}: ThemesProps) {
+export function Themes({setUpdatedTheme, setUpdatedLanguage}: ThemesProps) {
     const [showSwitcher, setShowSwitcher] = useState(false);
     const [color, setColor] = useState(getStorageColor());
     const [theme, setTheme] = useState(getTheme());
@@ -74,6 +77,10 @@ export function Themes({setUpdatedTheme}: ThemesProps) {
         setTheme(blackTheme);
     }
 
+    const toggleActiveFlag = () => {
+        setActiveFlag(activeFlag === 'en' ? 'ptBR' : 'en');
+    }
+
     useEffect(() => {
         const newTheme = {
             ...theme,
@@ -93,10 +100,12 @@ export function Themes({setUpdatedTheme}: ThemesProps) {
     }, [theme]);
 
 
-    const toggleActiveFlag = () => {
-        setActiveFlag(activeFlag === 'en' ? 'ptBR' : 'en');
+    useEffect(() => {
         localStorage.setItem('language', activeFlag);
-    }
+        setUpdatedLanguage(activeFlag)
+    }, [activeFlag]);
+
+
 
     return (<>
         <StyledSwitcher showSwitcher={showSwitcher}>
