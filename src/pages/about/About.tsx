@@ -22,15 +22,17 @@ import {Stats} from "../../components/stats/Stats.tsx";
 import {Skill} from "../../components/skills/Skills.tsx";
 import {resulme} from "../../Data.tsx";
 import {ResulmeItem} from "../../components/resulmeItem/ResulmeItem.tsx";
+import {useTranslation} from "react-i18next";
 
 export function About() {
+    const {t} = useTranslation();
     return (
         <SectionContainer>
             <AboutS>
-                <Title>About <span>Me</span></Title>
+                <Title> {t("about")} <span>{t("me")}</span></Title>
                 <AboutContainerGrid>
                     <InfoAbout>
-                        <Subtitle>Personal Infos</Subtitle>
+                        <Subtitle>{t("infoMe")}</Subtitle>
 
                         <ListGrid>
                             <Info></Info>

@@ -3,6 +3,9 @@
     "iam": "Oi, me chamo Igor. ",
     "dev": " Criar softwares é o meu hobby e profissão.",
     "aboutMe": "Olá! Seja bem-vindo ao meu portfólio. Sou desenvolvedor Full Cycle, ou seja, me envolvo em tudo que envolve o desenvolvimento de software, do comecinho ao fim. Aqui você vai encontrar vários projetos que mostram do que sou capaz, tanto em Front-End, quanto em Back-End, sem esquecer de DevOps e das práticas ágeis. Estou super animado para trabalhar junto contigo no próximo projeto. Vamos nessa?",
-    "more": "Saber mais"
+    "more": "Saber mais",
+    "about": "Sobre",
+    "me": "mim",
+    "infoMe": "Informações Pessoais"
   }
 }

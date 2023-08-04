@@ -3,6 +3,9 @@
     "iam": "Hi, my name is Igor ",
     "dev": "Creating software is both my hobby and profession.",
     "aboutMe": "Hi there! Welcome to my portfolio. I'm a Full Cycle Developer, which means I get involved in everything related to software development, from the very beginning to the end. Here you'll find several projects that showcase my abilities, both in Front-End and Back-End, not forgetting about DevOps and agile practices. I'm super excited to work with you on your next project. Shall we get started?",
-    "more": "More About Me"
+    "more": "More About Me",
+    "about": "About",
+    "me": "me",
+    "infoMe": "Personal Infos"
   }
 }
