@@ -52,7 +52,7 @@ export function About() {
             <Separator/>
 
             <SkillsAbout>
-                <SectionSubTitle>My Skills</SectionSubTitle>
+                <SectionSubTitle>{t("skill")}</SectionSubTitle>
                 <SkillsContainerGrid>
                     <Skill/>
                 </SkillsContainerGrid>
@@ -61,7 +61,7 @@ export function About() {
             <Separator/>
 
             <Resulme>
-                <SectionSubTitle>Experience & Education</SectionSubTitle>
+                <SectionSubTitle>{t("experience")}</SectionSubTitle>
 
                 <ResulmeContainerGrid>
 
