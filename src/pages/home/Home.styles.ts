@@ -81,9 +81,8 @@ export const Span = styled.span`
     color: ${props => props.theme.firstColor};
 `;
 export const Description = styled.p`
-  line-height: 2.1;
-  margin-block: 1rem 2rem;
-
+  line-height: 1.8;
+  margin-block: 0.8rem 1.6rem;
 `;
 export const Button = styled(NavLink)`
   display: inline-block;
