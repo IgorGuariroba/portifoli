@@ -14,13 +14,11 @@ export function Home() {
                     </Title>
 
                     <Description>
-                        Welcome to my portfolio! As a Full Cycle Developer, I engage in every phase of software
-                        development. Here you'll find a range of projects that showcase my skills in Front-End,
-                        Back-End, DevOps, and Agile practices. I look forward to collaborating on your next project.
+                        {t("aboutMe")}
                     </Description>
 
                     <Button to={'/sobre'}>
-                        More About Me <Icon><FaArrowRight/></Icon>
+                        {t("more")} <Icon><FaArrowRight/></Icon>
                     </Button>
                 </Data>
             </Content>
