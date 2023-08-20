@@ -58,12 +58,16 @@ export const personalInfo = [
 ];
 
 export function Info() {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     return (<>
-        {personalInfo.map(({id, title, description}) => (
+        {personalInfo.map(({
+                               id,
+                               title,
+                               description
+                           }) => (
             <InfoItem key={id}>
-                <InfoTitle>{t(title)}: </InfoTitle>
-                <InfoDescription>{t(description)}</InfoDescription>
+                <InfoTitle>{t(String(title))}: </InfoTitle>
+                <InfoDescription>{t(String(description))}</InfoDescription>
             </InfoItem>
         ))}
     </>);
