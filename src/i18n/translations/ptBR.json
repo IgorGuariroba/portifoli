@@ -9,6 +9,15 @@
     "infoMe": "Informações Pessoais",
     "skill": "Minhas Habilidades",
     "experience": "Experiência & Educação",
-    "fistName": "Primeiro nome"
+    "firstName": "Igor",
+    "firstNameKey": "Primeiro Nome",
+    "lastNameKey": "Sobrenome",
+    "lastName": "Guariroba",
+    "ageKey": "Idade",
+    "nationalityKey": "Pais de origem",
+    "nationality": "Brasileiro",
+    "addresskey": "Endereço",
+    "freelanceKey": "Freelancer",
+    "available": "Disponível"
   }
 }

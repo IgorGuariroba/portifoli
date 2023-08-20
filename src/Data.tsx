@@ -20,58 +20,6 @@ const Work2 = 'https://github.com/RafaelGoulartB/proffy/blob/master/.github/web-
 const Work3 = 'https://camo.githubusercontent.com/0b1f46813c44f5e6f87be2b65ccfb72c4cc9952d92338139668d123815605189/68747470733a2f2f692e696d6775722e636f6d2f5338384b7352692e676966';
 const Work4 = 'https://tavanoblog.com.br/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Ftavanoblog%2Fc9f2760f-5fc0-4b64-af29-b3ed8f5cad4b_Card%2B3D%2B%25282%2529.jpg%3Fauto%3Dcompress%2Cformat&w=1920&q=75';
 
-export const personalInfo = [
-    {
-        id: 1,
-        title: "First Name",
-        description: "Igor",
-    },
-    {
-        id: 2,
-        title: "Last Name",
-        description: "Guariroba",
-    },
-    {
-        id: 3,
-        title: "Age",
-        description: years,
-    },
-    {
-        id: 4,
-        title: "Nationality",
-        description: "Brazilian",
-    },
-    {
-        id: 5,
-        title: "Freelance",
-        description: "Available",
-    },
-    {
-        id: 6,
-        title: "Address",
-        description: "Mogi Das Cruzes, SP",
-    },
-    {
-        id: 7,
-        title: "Phone",
-        description: "(11) 97214-4771",
-    },
-    {
-        id: 8,
-        title: "Email",
-        description: "contact@igorguariroba.com.br",
-    },
-    {
-        id: 9,
-        title: "Github",
-        description: "https://github.com/igorguariroba",
-    },
-    {
-        id: 10,
-        title: "Languages",
-        description: "English, Portuguese",
-    },
-];
 
 export const stats = [
     {
