@@ -23,11 +23,13 @@ import {Skill} from "../../components/skills/Skills.tsx";
 import {resulme} from "../../Data.tsx";
 import {ResulmeItem} from "../../components/resulmeItem/ResulmeItem.tsx";
 import {useTranslation} from "react-i18next";
+import PageTracker from "../../components/pageTracker/PageTracker.tsx";
 
 export function About() {
     const {t} = useTranslation();
     return (
         <SectionContainer>
+            <PageTracker pageName='Sobre'/>
             <AboutS>
                 <Title> {t("about")} <span>{t("me")}</span></Title>
                 <AboutContainerGrid>

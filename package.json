@@ -26,6 +26,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-flagkit": "^2.0.4",
+    "react-gtm-module": "^2.0.11",
     "react-i18next": "^13.0.3",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.1",
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/react-gtm-module": "^2.0.1",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",

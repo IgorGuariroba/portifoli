@@ -23,10 +23,12 @@ import {
 } from "./Contact.styled.ts";
 import {SectionTitle} from "../portfolio/Portfolio.styled.ts";
 import {FaFacebookF, FaInstagram, FaLinkedin, FaYoutube} from "react-icons/fa";
+import PageTracker from "../../components/pageTracker/PageTracker.tsx";
 
 export function Contact() {
     return (
         <ContactSection>
+            <PageTracker pageName='Contato'/>
             <SectionTitle>
                 Get in <span>touch</span>
             </SectionTitle>
