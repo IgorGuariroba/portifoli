@@ -92,6 +92,9 @@ export const FormInputGroup = styled.div`
 `;
 export const FormInputdiv = styled.div`
   margin-bottom: 1.87rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 `;
 export const FormControl = styled.input`
   border: 1px solid ${props => props.theme.containerColor};
@@ -167,9 +170,28 @@ export const Button = styled.button`
     line-height: 3.7rem;
     height: 3.3rem;
   }
+  
+  pointer-events: auto;
+  cursor: pointer;
+  opacity: 1;
+
+  &:disabled {
+    pointer-events: none; 
+    cursor: not-allowed;
+    opacity: 0.6; 
+  }
 `;
 
 export const ButtonIcon = styled(FiSend)`
   font-size: ${props => props.theme.h3FontSize};
   line-height: 4rem;
 `;
+
+export const ErrorMessage = styled.div`
+  color: red;
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 3px;
+  border-radius: 8px;
+  height: 40px;
+  visibility: ${(props) => (props.isVisible ? 'visible' : 'hidden')};
+`
