@@ -79,7 +79,14 @@ export function Contact() {
 
                 setIsFormValid(isAllFieldsFilled);
             } catch (error) {
+
+                const getErrorMessage = (fieldName) => {
+                    const fieldError = error.issues.find((issue) => issue.path[0] === fieldName);
+                    return fieldError && fieldError.message !== 'Required' ? fieldError.message : '';
+                };
+
                 if (error instanceof ZodError) {
+
                     // Mapeie os erros do ZodError para o estado formErrors
                     const updatedFormErrors = {
                         name: getErrorMessage('name'),
