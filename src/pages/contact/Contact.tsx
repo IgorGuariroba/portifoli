@@ -26,6 +26,7 @@ import {FaFacebookF, FaInstagram, FaLinkedin, FaYoutube} from "react-icons/fa";
 import PageTracker from "../../components/pageTracker/PageTracker.tsx";
 import React, {useEffect, useState} from 'react';
 import {object, string, ZodError} from 'zod';
+import TagManager from 'react-gtm-module';
 
 
 const contactFormSchema = object({
@@ -98,6 +99,48 @@ export function Contact() {
     const handleFormSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
+        try {
+            contactFormSchema.parse(formData);
+
+            TagManager.dataLayer({
+                dataLayer: {
+                    event: 'formSubmit',
+                    formData: {
+                        name: formData.name,
+                        email: formData.email,
+                        subject: formData.subject,
+                        message: formData.message,
+                    },
+                },
+            });
+
+            // Limpe os campos do formulário e exiba uma mensagem de sucesso
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
+            });
+
+            // Exiba uma mensagem de sucesso para o usuário (você pode implementar isso como preferir)
+            alert('E-mail enviado com sucesso!');
+        } catch (error: any) {
+            if (error instanceof ZodError) {
+                // Mapeie os erros do ZodError para o estado formErrors
+                const updatedFormErrors = {
+                    name: getErrorMessage('name'),
+                    email: getErrorMessage('email'),
+                    subject: getErrorMessage('subject'),
+                    message: getErrorMessage('message'),
+                };
+
+                // Atualize os erros do formulário no estado
+                setFormErrors(updatedFormErrors);
+            } else {
+                // Lidar com outros erros, se necessário
+                console.error('An error occurred:', error);
+            }
+        }
     };
 
 
