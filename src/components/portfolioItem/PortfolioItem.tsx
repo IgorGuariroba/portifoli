@@ -9,10 +9,10 @@ import {
     PortfolioModal, PortfolioModalContent,
     PortfolioTitle, SpanItemDetails, SpanItemTitle, ProtfolioLink
 } from "./PortfolioItem.styled.ts";
+import {FaCode} from "react-icons/fa";
 
 
 interface Detail {
-    icon?: ReactNode | null,
     title: string,
     desc: string,
     link?: string,
@@ -43,12 +43,9 @@ export function PortfolioItem({img, title, details}: PortfolioItemProps) {
                         <ModalClose onClick={toggleModal}><StyledIcon/></ModalClose>
                         <ModalTitle>{title}</ModalTitle>
                         <ModalListGrid>
-                            {details.map(({icon, title, desc, link}, index ) => {
+                            {details.map(({title, desc, link}, index ) => {
                                 return (
                                     <ModalItem key={index}>
-                                        <ItemIcon>{icon}</ItemIcon>
-
-                                        <div>
                                             <SpanItemTitle>{title}</SpanItemTitle>
                                             {link ? (
                                                 <ProtfolioLink href={link} target="_blank" rel="noopener noreferrer">
@@ -57,7 +54,6 @@ export function PortfolioItem({img, title, details}: PortfolioItemProps) {
                                             ) : (
                                                 <SpanItemDetails>{desc}</SpanItemDetails>
                                             )}
-                                        </div>
                                     </ModalItem>
                                 );
                             })}

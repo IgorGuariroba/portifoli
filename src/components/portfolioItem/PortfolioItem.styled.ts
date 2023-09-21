@@ -118,6 +118,8 @@ export const ModalItem = styled.li`
   display: flex;
   align-items: center;
   column-gap: 8px;
+  text-align: center;
+  padding: 2px;
 `;
 export const ItemIcon = styled.span`
   display: flex;
