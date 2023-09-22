@@ -25,12 +25,11 @@ import {
 import {SectionTitle} from "../portfolio/Portfolio.styled.ts";
 import {FaFacebookF, FaInstagram, FaLinkedin, FaYoutube} from "react-icons/fa";
 import PageTracker from "../../components/pageTracker/PageTracker.tsx";
-import React, {useEffect, useState} from 'react';
-import {object, string, z, ZodError} from 'zod';
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-
-
+import React from 'react';
+import {object, string, z} from 'zod';
+import {useForm} from 'react-hook-form'
+import {zodResolver} from '@hookform/resolvers/zod'
+import emailjs from 'emailjs-com';
 import TagManager from 'react-gtm-module';
 
 
@@ -68,9 +67,18 @@ export function Contact() {
         }
     })
 
-    console.log(errors)
     async function handleSetForm(data: ContactFormData) {
-       console.log('data',data)
+
+        emailjs.send(
+            import.meta.env.VITE_YOUR_SERVICE_ID,
+            import.meta.env.VITE_YOUR_TEMPLATE_ID,
+            data,
+            import.meta.env.VITE_YOUR_USER_ID
+        ).then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        }, (err) => {
+            console.log('FAILED...', err);
+        });
     }
 
     return (
@@ -128,7 +136,7 @@ export function Contact() {
                 <ContactForm onSubmit={handleSubmit(handleSetForm)}>
                     <FormInputGroup>
                         <FormInputdiv>
-                            <ErrorMessage isVisible={errors.name?.message} >{errors.name?.message}</ErrorMessage>
+                            <ErrorMessage isVisible={errors.name?.message}>{errors.name?.message}</ErrorMessage>
                             <FormControl
                                 type="text"
                                 placeholder="Your name"
@@ -136,7 +144,7 @@ export function Contact() {
                             />
                         </FormInputdiv>
                         <FormInputdiv>
-                            <ErrorMessage isVisible={errors.email?.message} >{errors.email?.message}</ErrorMessage>
+                            <ErrorMessage isVisible={errors.email?.message}>{errors.email?.message}</ErrorMessage>
                             <FormControl
                                 type="email"
                                 placeholder="Your Email"
@@ -144,7 +152,7 @@ export function Contact() {
                             />
                         </FormInputdiv>
                         <FormInputdiv>
-                            <ErrorMessage isVisible={errors.subject?.message} >{errors.subject?.message}</ErrorMessage>
+                            <ErrorMessage isVisible={errors.subject?.message}>{errors.subject?.message}</ErrorMessage>
                             <FormControl
                                 type="text"
                                 placeholder="Your Subject"
@@ -153,7 +161,7 @@ export function Contact() {
                         </FormInputdiv>
                     </FormInputGroup>
                     <FormInputdiv>
-                        <ErrorMessage isVisible={errors.message?.message} >{errors.message?.message}</ErrorMessage>
+                        <ErrorMessage isVisible={errors.message?.message}>{errors.message?.message}</ErrorMessage>
                         <FormControlArea
                             placeholder="Your Message"
                             {...register('message')}
