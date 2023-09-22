@@ -57,6 +57,7 @@ export function Contact() {
             errors,
             isSubmitting
         },
+        reset,
     } = useForm<ContactFormData>({
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
@@ -74,9 +75,11 @@ export function Contact() {
             import.meta.env.VITE_YOUR_TEMPLATE_ID,
             data,
             import.meta.env.VITE_YOUR_USER_ID
-        ).then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
+        ).then(() => {
+            alert('E-mail Enviado!')
+            reset()
         }, (err) => {
+            alert('Ocorreu um erro ao tentar enviar o e-mail tente mais tarde!')
             console.log('FAILED...', err);
         });
     }
