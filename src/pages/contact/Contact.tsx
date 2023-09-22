@@ -1,3 +1,4 @@
+"use client"
 import {
     Button,
     ButtonIcon,
@@ -25,162 +26,52 @@ import {SectionTitle} from "../portfolio/Portfolio.styled.ts";
 import {FaFacebookF, FaInstagram, FaLinkedin, FaYoutube} from "react-icons/fa";
 import PageTracker from "../../components/pageTracker/PageTracker.tsx";
 import React, {useEffect, useState} from 'react';
-import {object, string, ZodError} from 'zod';
+import {object, string, z, ZodError} from 'zod';
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+
+
 import TagManager from 'react-gtm-module';
 
 
 const contactFormSchema = object({
     name: string()
         .min(3, {message: "O nome deve ter pelo menos 3 caracteres."})
-        .max(50,{ message: "O nome não pode ter mais de 50 caracteres." }),
-    email: string().email({ message: "O email fornecido não é válido." }),
+        .max(50, {message: "O nome não pode ter mais de 50 caracteres."}),
+    email: string().email({message: "O email fornecido não é válido."}),
     subject: string()
-        .min(2, { message: "O assunto deve ter pelo menos 2 caracteres." })
-        .max(100, { message: "O assunto não pode ter mais de 100 caracteres." }),
+        .min(2, {message: "O assunto deve ter pelo menos 2 caracteres."})
+        .max(100, {message: "O assunto não pode ter mais de 100 caracteres."}),
     message: string()
-        .min(10,{ message: "A mensagem deve ter pelo menos 10 caracteres." })
-        .max(1000, { message: "A mensagem não pode ter mais de 1000 caracteres." }),
+        .min(10, {message: "A mensagem deve ter pelo menos 10 caracteres."})
+        .max(1000, {message: "A mensagem não pode ter mais de 1000 caracteres."}),
 });
 
+type ContactFormData = z.infer<typeof contactFormSchema>
 
 export function Contact() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-    });
 
-    const [formErrors, setFormErrors] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-    });
-    const [isFormValid, setIsFormValid] = useState(false);
-
-    useEffect(() => {
-        const validateForm = async () => {
-            try {
-                await contactFormSchema.parseAsync(formData);
-
-                // Se a validação for bem-sucedida, não há erros no formulário
-                setFormErrors({
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: '',
-                });
-
-                // Verifique se todos os campos estão preenchidos
-                const isAllFieldsFilled = Object.keys(formData).every(
-                    (key) => formData[key] !== ''
-                );
-
-                setIsFormValid(isAllFieldsFilled);
-            } catch (error) {
-
-                const getErrorMessage = (fieldName) => {
-                    const fieldError = error.issues.find((issue) => issue.path[0] === fieldName);
-                    return fieldError && fieldError.message !== 'Required' ? fieldError.message : '';
-                };
-
-                if (error instanceof ZodError) {
-
-                    // Mapeie os erros do ZodError para o estado formErrors
-                    const updatedFormErrors = {
-                        name: getErrorMessage('name'),
-                        email: getErrorMessage('email'),
-                        subject: getErrorMessage('subject'),
-                        message: getErrorMessage('message'),
-                    };
-                    setFormErrors(updatedFormErrors);
-                    setIsFormValid(false);
-                }
-            }
-        };
-
-        validateForm().then();
-    }, [formData]);
-
-    const handleFormSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-
-        try {
-            contactFormSchema.parse(formData);
-
-            TagManager.dataLayer({
-                dataLayer: {
-                    event: 'formSubmit',
-                    formData: {
-                        name: formData.name,
-                        email: formData.email,
-                        subject: formData.subject,
-                        message: formData.message,
-                    },
-                },
-            });
-
-            // Limpe os campos do formulário e exiba uma mensagem de sucesso
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: '',
-            });
-
-            // Exiba uma mensagem de sucesso para o usuário (você pode implementar isso como preferir)
-            alert('E-mail enviado com sucesso!');
-        } catch (error: any) {
-            if (error instanceof ZodError) {
-                // Mapeie os erros do ZodError para o estado formErrors
-                const updatedFormErrors = {
-                    name: getErrorMessage('name'),
-                    email: getErrorMessage('email'),
-                    subject: getErrorMessage('subject'),
-                    message: getErrorMessage('message'),
-                };
-
-                // Atualize os erros do formulário no estado
-                setFormErrors(updatedFormErrors);
-            } else {
-                // Lidar com outros erros, se necessário
-                console.error('An error occurred:', error);
-            }
+    const {
+        register,
+        handleSubmit,
+        formState: {
+            errors,
+            isSubmitting
+        },
+    } = useForm<ContactFormData>({
+        resolver: zodResolver(contactFormSchema),
+        defaultValues: {
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
         }
-    };
+    })
 
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, fieldName: string) => {
-        const { value } = e.target;
-        const tempData = { [fieldName]: value };
-
-        try {
-            contactFormSchema.parse(tempData);
-        } catch (error) {
-            if (error instanceof ZodError) {
-
-                const getErrorMessage = (fieldName) => {
-                    const fieldError = error.issues.find((issue) => issue.path[0] === fieldName);
-                    return fieldError && fieldError.message !== 'Required' ? fieldError.message : '';
-                };
-
-                const updatedFormErrors = {
-                    name: getErrorMessage('name'),
-                    email: getErrorMessage('email'),
-                    subject: getErrorMessage('subject'),
-                    message: getErrorMessage('message'),
-                };
-
-                setFormErrors(updatedFormErrors);
-            }
-        }
-
-        setFormData({
-            ...formData,
-            [fieldName]: value,
-        });
-    };
+    console.log(errors)
+    async function handleSetForm(data: ContactFormData) {
+       console.log('data',data)
+    }
 
     return (
         <ContactSection>
@@ -234,45 +125,41 @@ export function Contact() {
                     </ContactSocials>
                 </ContactData>
 
-                <ContactForm onSubmit={handleFormSubmit}>
+                <ContactForm onSubmit={handleSubmit(handleSetForm)}>
                     <FormInputGroup>
                         <FormInputdiv>
-                            <ErrorMessage isVisible={formErrors.name} >{formErrors.name}</ErrorMessage>
+                            <ErrorMessage isVisible={errors.name?.message} >{errors.name?.message}</ErrorMessage>
                             <FormControl
                                 type="text"
                                 placeholder="Your name"
-                                value={formData.name}
-                                onChange={(e) => handleInputChange(e, 'name')}
+                                {...register('name')}
                             />
                         </FormInputdiv>
                         <FormInputdiv>
-                            <ErrorMessage isVisible={formErrors.email} >{formErrors.email}</ErrorMessage>
+                            <ErrorMessage isVisible={errors.email?.message} >{errors.email?.message}</ErrorMessage>
                             <FormControl
                                 type="email"
                                 placeholder="Your Email"
-                                value={formData.email}
-                                onChange={(e) => handleInputChange(e, 'email')}
+                                {...register('email')}
                             />
                         </FormInputdiv>
                         <FormInputdiv>
-                            <ErrorMessage isVisible={formErrors.subject} >{formErrors.subject}</ErrorMessage>
+                            <ErrorMessage isVisible={errors.subject?.message} >{errors.subject?.message}</ErrorMessage>
                             <FormControl
                                 type="text"
                                 placeholder="Your Subject"
-                                value={formData.subject}
-                                onChange={(e) => handleInputChange(e, 'subject')}
+                                {...register('subject')}
                             />
                         </FormInputdiv>
                     </FormInputGroup>
                     <FormInputdiv>
-                        <ErrorMessage isVisible={formErrors.message} >{formErrors.message}</ErrorMessage>
+                        <ErrorMessage isVisible={errors.message?.message} >{errors.message?.message}</ErrorMessage>
                         <FormControlArea
                             placeholder="Your Message"
-                            value={formData.message}
-                            onChange={(e) => handleInputChange(e, 'message')}
+                            {...register('message')}
                         />
                     </FormInputdiv>
-                    <Button disabled={!isFormValid} >Send Message <span><ButtonIcon/></span></Button>
+                    <Button disabled={isSubmitting}>Send Message <span><ButtonIcon/></span></Button>
                 </ContactForm>
             </ContactContainer>
         </ContactSection>
